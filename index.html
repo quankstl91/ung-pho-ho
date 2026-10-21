@@ -308,10 +308,10 @@ function renderTabs(){
 }
 const EMPTY=k=>`<p class="empty">Chưa có số liệu. Bổ sung vào sheet <b>${k.toUpperCase()}</b> của file DATA từ PA của hồ, ghi kèm số QĐ và trang.</p>`;
 const byKey=(rows,k)=>rows.reduce((g,r)=>((g[r[k]??""]=g[r[k]??""]||[]).push(r),g),{});
-function gal(v){if(!v)return"";return `<div class="gal">${String(v).split(";").map(f=>{const m=f.match(/_p(\d+)\./);return `<button type="button" onclick="zoomImg('${esc(f)}')"><img loading="lazy" src="img/${esc(f)}" alt="Trang ${m?m[1]:""}"><span>Trang PDF ${m?m[1]:""}</span></button>`}).join("")}</div>`}
+function gal(v){if(!v)return"";return `<div class="gal">${String(v).split(";").map(f=>{const m=f.match(/_p(\d+)\./);return `<button type="button" onclick="zoomImg('${esc(f)}')"><img loading="lazy" src="${esc(f)}" alt="Trang ${m?m[1]:""}"><span>Trang PDF ${m?m[1]:""}</span></button>`}).join("")}</div>`}
 function zoomImg(f){let z=document.getElementById("zv");if(!z){z=document.createElement("div");z.id="zv";document.body.appendChild(z)}
   let w=100;const m=f.match(/_p(\d+)\./);
-  z.innerHTML=`<div class="bar"><button id="zc">✕</button><span style="flex:1">Trang PDF ${m?m[1]:""}</span><button id="zm">−</button><button id="zp">+</button></div><div class="sc"><img src="img/${esc(f)}" style="width:100%"></div>`;
+  z.innerHTML=`<div class="bar"><button id="zc">✕</button><span style="flex:1">Trang PDF ${m?m[1]:""}</span><button id="zm">−</button><button id="zp">+</button></div><div class="sc"><img src="${esc(f)}" style="width:100%"></div>`;
   z.hidden=false;const im=z.querySelector("img"),set=d=>{w=Math.max(100,Math.min(400,w+d));im.style.width=w+"%"};
   z.querySelector("#zc").onclick=()=>{z.hidden=true;z.innerHTML=""};z.querySelector("#zm").onclick=()=>set(-50);z.querySelector("#zp").onclick=()=>set(50)}
 function renderPanel(){
