@@ -1,0 +1,8 @@
+CÀI APP ỨNG PHÓ HỒ CHỨA LÊN IPHONE (chạy không cần mạng)
+1. Đưa nguyên thư mục này lên một trang web https (GitHub Pages, Netlify, Cloudflare Pages hoặc máy chủ nội bộ Công ty có https).
+2. Trên iPhone mở Safari (không dùng Chrome/Zalo), vào địa chỉ trang.
+3. Bấm nút Chia sẻ (ô vuông có mũi tên) > Thêm vào MH chính (Add to Home Screen) > Thêm.
+4. Mở app từ biểu tượng trên màn hình chính 1 lần khi còn mạng để app tự lưu bộ nhớ đệm.
+5. Từ đó app chạy được khi mất mạng. Khi có dữ liệu mới: mở app lúc có mạng, đóng hẳn rồi mở lại.
+Android: mở bằng Chrome > menu > Cài đặt ứng dụng / Thêm vào màn hình chính.
+Lưu ý: trang web đặt công khai thì ai có địa chỉ cũng xem được. Không đưa danh bạ cá nhân lên trang công khai.
